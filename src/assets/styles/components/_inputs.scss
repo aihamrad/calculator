@@ -1,0 +1,20 @@
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 7px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: $color-white;
+  &-small {
+    width: 90px;
+  }
+  &-big {
+    width: 190px;
+  }
+
+  &:hover {
+    background-color: $color-light-grey;
+  }
+}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: $color-white;
+  background-color: $color-background;
+  height: 100vh;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100%;
+}
