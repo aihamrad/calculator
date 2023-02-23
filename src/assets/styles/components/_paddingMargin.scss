@@ -11,6 +11,19 @@
   }
 }
 
+.pt {
+  &-s {
+    padding-top: 10px;
+  }
+}
+
+.pv {
+  &-s {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 .mb {
   &-xs {
     margin-bottom: 5px;

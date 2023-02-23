@@ -14,7 +14,6 @@ function App() {
 
   const handleClearClick = () => {
     setDisplayValue('');
-    setHistory([]);
     setOperation('');
   };
 
@@ -52,6 +51,11 @@ function App() {
       setOperation((prev) => prev.concat(selectedOperation));
     }
     setDisplayValue('');
+  };
+
+  const handleClearHistory = () => {
+    setShowHistory(false);
+    setHistory([]);
   };
 
   return (
@@ -147,12 +151,20 @@ function App() {
                 </div>
               </div>
             </div>
-            {showHistory && (
-              <div className='flex-basis-30 b-full b-radius-5 p-s'>
-                <div>History of operations</div>
-                {history.map((x, index) => (
-                  <div key={index}> {x}</div>
-                ))}
+            {showHistory && history.length > 0 && (
+              <div className='flex-basis-30 p-relative b-full b-radius-5 history-box'>
+                <div className='history-list pv-s pt-s'>
+                  <div>History of operations</div>
+                  {history.map((x, index) => (
+                    <div key={index}> {x}</div>
+                  ))}
+                </div>
+                <button
+                  className='p-s pointer background-dark-grey'
+                  onClick={handleClearHistory}
+                >
+                  Clear History
+                </button>
               </div>
             )}
           </div>
